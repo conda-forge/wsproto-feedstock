@@ -1,6 +1,6 @@
 {% set name = "wsproto" %}
-{% set version = "0.14.0" %}
-{% set sha256 = "55c3da870460e8838b2fbe4d10f3accc0cea3a13d5e8dbbdc6da5d537d6d44dc" %}
+{% set version = "0.14.1" %}
+{% set sha256 = "ed222c812aaea55d72d18a87df429cfd602e15b6c992a07a53b495858f083a14" %}
 
 package:
   name: {{ name|lower }}

@@ -22,9 +22,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    
-    <td>All platforms:</td>
+<table><tr><td>All platforms:</td>
     <td>
       <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4392&branchName=master">
         <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wsproto-feedstock?branchName=master">
@@ -125,5 +123,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@maxyme](https://github.com/maxyme/)
 

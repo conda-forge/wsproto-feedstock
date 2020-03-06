@@ -1,29 +1,24 @@
-{% set name = "wsproto" %}
 {% set version = "0.15.0" %}
-{% set sha256 = "614798c30e5dc2b3f65acc03d2d50842b97621487350ce79a80a711229edfa9d" %}
 
 package:
-  name: {{ name|lower }}
+  name: wsproto
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/w/wsproto/wsproto-{{ version }}.tar.gz
+  sha256: 614798c30e5dc2b3f65acc03d2d50842b97621487350ce79a80a711229edfa9d
 
 build:
-  skip: true  # [py==27]
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  skip: true  # [py<36]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
-
+    - pip
   run:
-    - python >=3.6.1
+    - python
     - dataclasses  # [py<37]
     - h11 >=0.8.1
 
@@ -52,3 +47,4 @@ extra:
   recipe-maintainers:
     - maxyme
     - dhirschfeld
+    - ocefpaf

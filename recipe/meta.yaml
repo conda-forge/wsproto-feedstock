@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: wsproto
@@ -9,7 +9,7 @@ source:
   sha256: 614798c30e5dc2b3f65acc03d2d50842b97621487350ce79a80a711229edfa9d
 
 build:
-  number: 2
+  number: 1
   skip: true  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -19,8 +19,9 @@ requirements:
     - pip
   run:
     - python
+    - h11 >=0.8.1,<0.9.0
     - dataclasses  # [py<37]
-    - h11 >=0.8.1
+    - enum34 >=1.0.4,<2  # [py2k]
 
 test:
   imports:

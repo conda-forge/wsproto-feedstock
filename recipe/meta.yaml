@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: wsproto
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wsproto/wsproto-{{ version }}.tar.gz
-  sha256: 614798c30e5dc2b3f65acc03d2d50842b97621487350ce79a80a711229edfa9d
+  sha256: 868776f8456997ad0d9720f7322b746bbe9193751b5b290b7f924659377c8c38
 
 build:
-  number: 4
+  number: 0
   skip: true  # [py<36]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
   run:
     - python
     - dataclasses  # [py<37]
-    - h11 >=0.8.1
+    - h11 >=0.9.0
 
 test:
   imports:
@@ -31,7 +31,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Pure Python, pure state-machine WebSocket implementation.'
+  summary: Pure Python, pure state-machine WebSocket implementation.
   description: |
     This repository contains a pure-Python implementation of a WebSocket protocol stack.
     It’s written from the ground up to be embeddable in whatever program you choose to use,

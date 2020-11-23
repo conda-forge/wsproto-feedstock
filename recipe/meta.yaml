@@ -20,7 +20,7 @@ requirements:
   run:
     - python
     - dataclasses  # [py<37]
-    - h11 >=0.8.1
+    - h11 >=0.9.9
 
 test:
   imports:

@@ -9,7 +9,7 @@ source:
   sha256: 868776f8456997ad0d9720f7322b746bbe9193751b5b290b7f924659377c8c38
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -20,7 +20,7 @@ requirements:
   run:
     - python
     - dataclasses  # [py<37]
-    - h11 >=0.9.0
+    - h11 >=0.9.0,<1.0
 
 test:
   imports:

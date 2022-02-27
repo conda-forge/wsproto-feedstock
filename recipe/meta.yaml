@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: wsproto
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wsproto/wsproto-{{ version }}.tar.gz
-  sha256: 868776f8456997ad0d9720f7322b746bbe9193751b5b290b7f924659377c8c38
+  sha256: a2e56bfd5c7cd83c1369d83b5feccd6d37798b74872866e62616e0ecf111bda8
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 

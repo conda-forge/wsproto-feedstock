@@ -17,6 +17,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - h11 >=0.9.0,<1.0
